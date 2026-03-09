@@ -1,0 +1,17 @@
+[build-system]
+requires = [
+  "setuptools>=42",
+  "scikit-build",
+  "numpy",
+  "cmake>=3.21",
+  "ninja",
+  "pybind11>=2.10",
+]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "bytetrack"
+version = "1.0.0"
+description = "ByteTrack C++ multi-object tracker with Python bindings"
+requires-python = ">=3.8"
+dependencies = ["numpy"]
