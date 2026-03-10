@@ -191,6 +191,9 @@ void STrack::multi_predict(std::vector<STrack*> &stracks, byte_kalman::KalmanFil
 	{
 		if (stracks[i]->state != TrackState::Tracked)
 		{
+			stracks[i]->mean[4] = 0;
+			stracks[i]->mean[5] = 0;
+			stracks[i]->mean[6] = 0;
 			stracks[i]->mean[7] = 0;
 		}
 		kalman_filter.predict(stracks[i]->mean, stracks[i]->covariance);
